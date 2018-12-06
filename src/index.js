@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import App from './app/app.js';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import Login from './components/auth/login.js';
+import './styles.css';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+class App extends React.Coponent {
+  render() {
+    return (
+      <LoginContext>
+        <Login />
+        <hr />
+      </LoginContext>
+    )
+  };
+}
